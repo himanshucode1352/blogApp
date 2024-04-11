@@ -10,7 +10,7 @@ app.use(express.json());
 app.use('/blog',blogRoutes);
 app.use(logger('dev'));
 Dotenv.config()
-const connectionString = "mongodb+srv://himtri6657:ambala123@cluster0.7kqxo.mongodb.net/ecommerce"
+const connectionString = process.env.mongoUri
 
 
 mongoose.connect(connectionString).then(()=>{
